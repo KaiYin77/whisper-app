@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup .NET 8
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Restore
         run: dotnet restore WhisperDesktop.csproj
@@ -26,7 +26,7 @@ jobs:
         run: dotnet build WhisperDesktop.csproj -c Release --no-restore
 
       - name: Publish win-x64
-        run: dotnet publish WhisperDesktop.csproj -c Release -f net8.0 -r win-x64 --self-contained true -o publish/win-x64
+        run: dotnet publish WhisperDesktop.csproj -c Release -f net10.0 -r win-x64 --self-contained true -o publish/win-x64
 
       - name: Runtime smoke test (Windows)
         shell: pwsh
@@ -46,10 +46,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup .NET 8
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: "8.0.x"
+          dotnet-version: "10.0.x"
 
       - name: Install ffmpeg
         run: brew install ffmpeg
@@ -61,7 +61,7 @@ jobs:
         run: dotnet build WhisperDesktop.csproj -c Release --no-restore
 
       - name: Publish osx-arm64
-        run: dotnet publish WhisperDesktop.csproj -c Release -f net8.0 -r osx-arm64 --self-contained true -o publish/osx-arm64
+        run: dotnet publish WhisperDesktop.csproj -c Release -f net10.0 -r osx-arm64 --self-contained true -o publish/osx-arm64
 
       - name: Runtime smoke test (macOS)
         run: |

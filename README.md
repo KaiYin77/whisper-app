@@ -11,7 +11,7 @@
 <p align="center">
   <a href="../../releases/latest"><img src="https://img.shields.io/github/v/release/KaiYin77/whisper-desktop?label=download&color=0078D4" alt="Latest release" /></a>
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS-blue" alt="Platform" />
-  <img src="https://img.shields.io/badge/.NET-8.0-512bd4" alt=".NET 8" />
+  <img src="https://img.shields.io/badge/.NET-10.0-512bd4" alt=".NET 10" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
 </p>
 
